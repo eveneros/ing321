@@ -12,4 +12,4 @@ indice = busqueda_lineal(numeros, elemento_buscado)
 if indice != -1:
    print(f"El numero {elemento_buscado} se encuentra en el indice {numeros}")
 else:
-    print(f"el numero {elemento_buscado} no se encuentra en la lista") 
+    print(f"el numero {elemento_buscado} no se encuentra en la lista {numeros}") 
