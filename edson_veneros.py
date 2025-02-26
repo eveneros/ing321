@@ -7,9 +7,17 @@ class Algoritmos:
         c= a + b
         print(f"resultado: {c}")
 
+    def es_positivo(self, n):
+        if n>=0:
+            print("Es positivo")
+        else:
+            print("Es negativo")
+
+
 
 algoritmos = Algoritmos()
-algoritmos.suma_numeros(1,2)
+#algoritmos.suma_numeros(1,2)
+algoritmos.es_positivo(-1)
 
 
 
