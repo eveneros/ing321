@@ -1,5 +1,7 @@
-
 class labo_4:
+    
+
+    
     def suma(self, a, b):
         return a + b
 
