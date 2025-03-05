@@ -7,5 +7,6 @@ class ProbarCalculos(unittest.TestCase):
         calculos = Calculos(8, 2)
         self.assertEqual(calculos.get_suma(), 11, 'La suma tiene error.')
 
+    
 if __name__ == '__main__':
     unittest.main()
