@@ -12,12 +12,12 @@ class ProbarCalculos(unittest.TestCase):
         self.assertEqual(calculos.get_resta(), 5, 'La resta tiene error.')
 
     def test_multiplicacion(self):
-        calculos = Calculos(5, 3)
-        self.assertEqual(calculos.get_multiplicacion(), 15, 'La multiplicacion tiene error.')
+        calculos = Calculos(8, 4)
+        self.assertEqual(calculos.get_multiplicacion(), 32, 'La multiplicación tiene error.')
 
     def test_division(self):
-        calculos = Calculos(8, 2)
-        self.assertEqual(calculos.get_division(), 4, 'La divisdion tiene error.')
+        calculos = Calculos(8, 5)
+        self.assertEqual(calculos.get_division(), 1.6, 'La división tiene error.')
 
 if __name__ == '__main__':
     unittest.main()
