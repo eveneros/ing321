@@ -6,7 +6,7 @@ class ProbarCalculos(unittest.TestCase):
 
     def test_suma(self):
         calculos = Calculos(8, 2)
-        self.assertEqual(calculos.get_suma(), 10, 'La suma tiene error.')
+        self.assertEqual(calculos.get_suma(), 11, 'La suma tiene error.')
 
     def test_resta(self):
         calculos = Calculos(8, 2)

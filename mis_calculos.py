@@ -13,6 +13,12 @@ class Calculos:
         return self.a * self.b
 
     def get_division(self):
+<<<<<<< HEAD
         if self.b == 0:
             return 'Error: División por cero' 
         return self.a / self.b
+=======
+        return self.a / self.b
+    
+
+>>>>>>> 944044aa5857fc7e579cb5fae3d8c2d346af5669
