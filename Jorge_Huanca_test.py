@@ -17,7 +17,7 @@ class ProbarCalculos(unittest.TestCase):
 
     def test_division(self):
         calculos = Calculos(8, 2)
-        self.assertEqual(calculos.get_division(), 4, 'La división tiene error.')
+        self.assertEqual(calculos.get_division(), 4, ' La división tiene error.')
 
     def test_division_por_cero(self):
         calculos = Calculos(8, 0)
