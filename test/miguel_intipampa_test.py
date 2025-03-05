@@ -13,7 +13,8 @@ class ProbarCalculos(unittest.TestCase):
 
     def test_multiplicacion(self):
         calculos = Calculos(5, 3)
-        self.assertEqual(calculos.get_multiplicacion(), 15, 'La multiplicacion tiene error.')
+        self.assertEqual(calculos.get_multiplicacion(), 15
+        , 'La multiplicacion tiene error.')
 
     def test_division(self):
         calculos = Calculos(8, 2)
