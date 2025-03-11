@@ -1,7 +1,7 @@
 import unittest
 from mis_calculos import Calculos
 
-class ProbarCalculos(unittest.TestCase):
+class Pruebita(unittest.TestCase):
 
     def test_multi(self):
         calculos = Calculos(8, 2)

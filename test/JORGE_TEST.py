@@ -5,22 +5,19 @@ class ProbarCalculos(unittest.TestCase):
 
     def test_suma(self):
         calculos = Calculos(8, 2)
-        self.assertEqual(calculos.get_suma(), 11, 'La suma tiene error.')
-
+        self.assertEqual(calculos.get_suma(), 10, 'La suma tiene error.')
 
     def test_resta(self):
         calculos = Calculos(8, 2)
-        self.assertEqual(calculos.get_resta(), 11, 'La resta tiene error.')
+        self.assertEqual(calculos.get_resta(), 6, 'La resta tiene error.')
 
     def test_multiplicacion(self):
         calculos = Calculos(8, 2)
-        self.assertEqual(calculos.get_multiplicacion(), 11, 'La multiplicasion tiene error.')
+        self.assertEqual(calculos.get_multiplicacion(), 16, 'La multiplicación tiene error.')
 
     def test_division(self):
         calculos = Calculos(8, 2)
-        self.assertEqual(calculos.get_division(), 11, 'La division tiene error.')
-
-            
+        self.assertEqual(calculos.get_division(), 4, 'La división tiene error.')
 
 if __name__ == '__main__':
     unittest.main()
