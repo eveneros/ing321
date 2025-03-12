@@ -1,5 +1,5 @@
 import json
-
+#Edson saravia
 def cargar_alumnos(ruta_archivo):
     # Abre el archivo JSON y carga el contenido
     with open(ruta_archivo, 'r') as archivo:
