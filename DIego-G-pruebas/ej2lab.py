@@ -21,10 +21,10 @@ def buscar_personaje(nombre, tabla_hash):
     """
     return tabla_hash.get(nombre, "Personaje no encontrado")
 
-
+# Ejemplo de uso:
 personajes = obtener_personajes_starwars()
 tabla_hash = crear_tabla_hash(personajes)
 
-
-resultado = buscar_personaje("Darth Vader", tabla_hash)
-print(resultado)  
+# Buscar un personaje por nombre
+resultado = buscar_personaje("Luke Skywalker", tabla_hash)
+print(resultado)  # Muestra todos los datos de Luke Skywalker si existe
