@@ -1,42 +1,30 @@
 import requests
 
-def obtener_posts():
+def obtener_personajes_starwars():
     """
-    Obtiene una lista de publicaciones desde una API pública
-    y las ordena por su ID.
+    Consulta la API de Star Wars y devuelve una lista de personajes.
     """
-    url = "https://jsonplaceholder.typicode.com/posts"
+    url = "https://swapi.dev/api/people/"
     respuesta = requests.get(url)
-    posts = respuesta.json()
-    return sorted(posts, key=lambda post: post["id"])  # Ordenar por ID
+    return respuesta.json()["results"]  # Extrae la lista de personajes
 
-def busqueda_binaria(posts, id_objetivo):
+def crear_tabla_hash(personajes):
     """
-    Realiza una búsqueda binaria para encontrar un post con el ID especificado.
+    Crea una tabla hash (diccionario) usando el nombre del personaje como clave
+    para búsquedas rápidas.
     """
-    izquierda = 0
-    derecha = len(posts) - 1
+    return {personaje["name"]: personaje for personaje in personajes}
 
-    while izquierda <= derecha:
-        medio = (izquierda + derecha) // 2
-        id_actual = posts[medio]["id"]
+def buscar_personaje(nombre, tabla_hash):
+    """
+    Busca un personaje por nombre dentro de la tabla hash.
+    """
+    return tabla_hash.get(nombre, "Personaje no encontrado")
 
-        if id_actual == id_objetivo:
-            return posts[medio]
-        elif id_actual < id_objetivo:
-            izquierda = medio + 1
-        else:
-            derecha = medio - 1
 
-    return None  # No se encontró el post
+personajes = obtener_personajes_starwars()
+tabla_hash = crear_tabla_hash(personajes)
 
-# Ejemplo de uso:
-posts = obtener_posts()
-post_encontrado = busqueda_binaria(posts, 42)  # Buscar post con ID = 42
 
-# Imprimir resultado
-if post_encontrado:
-    print("Post encontrado:")
-    print(post_encontrado)
-else:
-    print("No se encontró un post con ese ID.")
+resultado = buscar_personaje("Darth Vader", tabla_hash)
+print(resultado)  
