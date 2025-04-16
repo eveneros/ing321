@@ -1,13 +1,14 @@
 def merge_sort(arr):
     if len(arr) > 1:
-        mid = len(arr) // 2  
-        L = arr[:mid]        
-        R = arr[mid:]        
-        
+        mid = len(arr) // 2
+        L = arr[:mid]
+        R = arr[mid:]
+
         merge_sort(L)
         merge_sort(R)
 
         i = j = k = 0
+
         while i < len(L) and j < len(R):
             if L[i] < R[j]:
                 arr[k] = L[i]
@@ -27,7 +28,6 @@ def merge_sort(arr):
             j += 1
             k += 1
 
-# Ejemplo:
 arr = [38, 27, 43, 3, 9, 82, 10]
 merge_sort(arr)
 print("Array ordenado:", arr)
