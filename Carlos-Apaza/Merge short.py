@@ -1,8 +1,8 @@
 def merge_sort(arr):
     if len(arr) > 1:
-        mid = len(arr) // 2  # Corregido: era Z en lugar de 2
-        L = arr[:mid]        # Corregido: era arr[mid] (solo un elemento)
-        R = arr[mid:]        # Correcto
+        mid = len(arr) // 2  
+        L = arr[:mid]        
+        R = arr[mid:]        
         
         merge_sort(L)
         merge_sort(R)
