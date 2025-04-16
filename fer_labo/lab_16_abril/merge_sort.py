@@ -27,7 +27,6 @@ def merge_sort(arr):
             arr[k] = R[j]
             j += 1
             k += 1
-# Ejemplo:
 arr = [38, 27, 43, 3, 9, 82, 10]
 merge_sort(arr)
 print("Array ordenado:", arr)
