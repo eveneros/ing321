@@ -8,6 +8,6 @@ def quick_sort(arr):
     return quick_sort(left) + middle + quick_sort(right)
 
 
-# Ejemplo:
+
 arr = [3, 6, 8, 10, 1, 2, 1,50]
 print("Quick Sort:", quick_sort(arr))

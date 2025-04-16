@@ -9,7 +9,8 @@ def binary_search(arr, target, low, high):
     else:
         return binary_search(arr, target, low, mid - 1)
 
+# Ejemplo:
 arr = [2, 5, 8, 12, 16, 23, 38, 56]
-target = 38
-result = binary_search(arr, target, 0, len(arr) - 1)
+target = 16
+result = binary_search(arr, target, 8, len(arr) - 1)
 print("Elemento encontrado en índice:", result)
