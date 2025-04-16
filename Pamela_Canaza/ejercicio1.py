@@ -5,6 +5,7 @@ def get_starwars_characters():
     response = requests.get(url)
     return response.json()["results"]  # Lista de personajes
 
+# Crear tabla de hash (diccionario) para búsqueda rápida
 def create_hash_table(characters):
     return {character["name"]: character for character in characters}
 
